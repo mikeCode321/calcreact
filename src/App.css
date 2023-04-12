@@ -1,38 +1,114 @@
-.App {
-  text-align: center;
+html {
+  font-size: 60%;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* center in the middle of the screen */
+.calculator {
+  border: 3px solid #ccc;
+  border-radius: 5px;
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%, 50%);
+  width: 400px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#separator{
+    margin-top: 1px;
+    width: 100%;
+    background-color: black;
+    border: none;
+    border-radius: 2px;
+    height: 3px;
 }
 
-.App-link {
-  color: #61dafb;
+#inputBox {
+  width: 100%;
+  font-size: 5rem;
+  height: 100px;
+  border: none;
+  background-color: rgba(6, 2, 2, 0.866);
+  color: #fff;
+  text-align: right;
+  border-radius: 5px;
+  
+  /* margin: 10px; */
+  padding-left: 10px;
+  padding-right: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+  height: 60px;
+  background-color: #fff;
+  border: 1px solid black;
+  border-radius: 2px;
+  background-color: transparent;
+  font-size: 2rem;
+  font-weight: 400;
+  background-image: linear-gradient(
+    to bottom,
+    transparent,
+    transparent 50%,
+    rgba(0, 0, 0, 0.05)
+  );
 }
+
+button:hover {
+  background-color: #eaeaea;
+}
+
+.operator {
+  color: #337cac;
+}
+
+.all-clear {
+  background-color: #f0595f;
+  border-color: #b0353b;
+  color: #fff;
+}
+
+.all-clear:hover {
+  background: #dc292f;
+}
+
+#equal-sign {
+  background-color: #5c80da;
+  border-color: #337cac;
+  color: #fff;
+}
+
+#equal-sign:hover {
+  background-color: #426cd9;
+}
+
+.calculator-keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+#equal-sign {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 6;
+  height: 100%;
+}
+
+.all-clear {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  width: 100%;
+}
+
+
